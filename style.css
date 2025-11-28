@@ -1,0 +1,131 @@
+/* Resets e estilos gerais */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #eef2f3, #d9e2ec);
+    background-attachment: fixed;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: rgba(255,255,255, 0.55);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+h1 {
+    font-size: 1.6rem;
+    padding: 20px 0;
+}
+
+h2 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #264b63;
+    background-color: rgba(255,255,255, 0.55);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    padding: 12px 0;
+    letter-spacing: 2px;
+}
+
+.galeria {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgba(255,255,255, 0.55);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.galeria a {
+    text-decoration: none;
+    overflow: hidden;
+    border-radius: inherit; 
+}
+
+.galeria img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    filter: grayscale(50%);
+    transition: transform 0.3s ease;
+}
+
+.galeria a:hover img {
+    transform: scale(1.08);
+    filter: grayscale(0%);
+}
+
+/* Estilos/Regras de personalização do SimpleLightbox */
+
+.sl-overlay {
+    background: rgba(0, 0, 0, 0.783);
+    backdrop-filter: blur(4px);
+}
+
+.sl-image {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.471);
+}
+
+.sl-image img {
+    border-radius: 10px;
+}
+
+.sl-wrapper .sl-image .sl-caption {
+    font-size: 0.9rem;
+    padding: 12px 18px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.sl-download a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    display: inline-block;
+    color: #ccc;
+}
+
+.sl-download a:hover {
+    transform: scale(1.05);
+}
+
+/* Regra com seletor aninhado (nested) */
+.sl-wrapper {
+    .sl-counter, 
+    .sl-close, 
+    .sl-navigation button {
+        color: white;
+        font-weight: bold;
+    }
+}
+
+
+/* Regra com dupla classe/combinada */
+.sl-counter.flash {
+    animation-name: flashContador;
+    animation-duration: 0.35s;
+    animation-timing-function: ease;
+}
+
+
+@keyframes flashContador {
+    0% { transform: scale(1); color: white; }
+    50% { transform: scale(1.25); color: #4ea3ff; }
+    100% { transform: scale(1); color: white; }
+}

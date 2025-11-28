@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagens</title>
+    <meta name="description"
+        content="Uma galeria de fotos leve, acessível e responsiva criada para demonstrar interatividade com HTML, CSS e JavaScript">
+
+    <!-- Importando via CDN o CSS da lib SimpleLightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.3/dist/simple-lightbox.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>JavaScript | Galeria de Imagens usando SimpleLightbox</h1>
+    </header>
+
+    <main>
+        <h2>Belezas da Natureza</h2>
+        <div class="galeria">
+            <a href="images/grande1.jpg" title="A serenidade das montanhas e o cultivo milenar">
+                <img src="images/thumb1.jpg" alt="Paisagem de terraços de arroz em degraus cobrindo a encosta de uma montanha">
+            </a>
+            <a href="images/grande2.jpg" title="A imensidão do universo sobre o horizonte">
+                <img src="images/thumb2.jpg" alt="Paisagem noturna panorâmica com um céu azul profundo repleto de milhares de estrelas e a Via Láctea visível">
+            </a>
+            <a href="images/grande3.jpg" title="Onde a terra encontra o mar: a beleza do litoral selvagem">
+                <img src="images/thumb3.jpg" alt="Vista aérea de uma enseada em formato de meia-lua">
+            </a>
+            <a href="images/grande4.jpg" title="Nos trilhos da natureza: uma viagem pelas montanhas">
+                <img src="images/thumb4.jpg" alt="Um trem azul de passageiros percore uma curva em trilhos que cotam uma montanha">
+            </a>
+            <a href="images/grande5.jpg" title="O sol vermelho: um círculo de fogo no fim do dia">
+                <img src="images/thumb5.jpg" alt="Pôr do sol com um grande disco solar vermelho intenso">
+            </a>
+            <a href="images/grande6.jpg" title="A trilha para o topo: onde o verde encontra a rocha">
+                <img src="images/thumb6.jpg" alt="Vista de um pico rochoso iluminado em tons de dourado pelo sol">
+            </a>
+        </div>
+    </main>
+
+    <!-- Importando via CDN o JS da lib SimpleLightbox -->
+<script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.3/dist/simple-lightbox.min.js"></script>
+
+<script src="scripts.js"></script>
+
+</body>
+
+</html>
